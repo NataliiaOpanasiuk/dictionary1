@@ -13,7 +13,9 @@ export default function Dictionary() {
   return (
     <div>
       <button onClick={toggleComponents}>{showWord ? "Phrase" : "Word"}</button>
-      <div>{showWord ? <WordSearch /> : <PhraseSearch />}</div>
+      <div>
+        {showWord ? <WordSearch defaultKeyword="blur" /> : <PhraseSearch />}
+      </div>
     </div>
   );
 }
