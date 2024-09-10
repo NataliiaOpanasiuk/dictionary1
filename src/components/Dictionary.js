@@ -14,7 +14,11 @@ export default function Dictionary() {
     <div>
       <button onClick={toggleComponents}>{showWord ? "Phrase" : "Word"}</button>
       <div>
-        {showWord ? <WordSearch defaultKeyword="blur" /> : <PhraseSearch />}
+        {showWord ? (
+          <WordSearch defaultKeyword="blur" />
+        ) : (
+          <PhraseSearch defaultKeyfrase="raining cats and dogs" />
+        )}
       </div>
     </div>
   );
